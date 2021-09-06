@@ -1,0 +1,229 @@
+<!-- head section -->
+<%- include('./partials/head.ejs') %>
+
+
+    <body>
+
+
+        <!-- header section -->
+        <header class="home_header">
+
+            <!-- navbar section -->
+            <%- include('./partials/nav.ejs') %>
+
+                <div class="nav-text">
+                    <h1>Have a <span> great </span> <br> journey of food </h1>
+                    <form class="d-flex">
+                        <button class="nav-txt-btn"> <a href="/bookTable">Book a table</a></button>
+                    </form>
+                </div>
+        </header>
+
+        <!-- Welcome section -->
+        <section class="welcome-section">
+            <div class="container py-5">
+                <div class="row gy-3 py-3">
+                    <div class="col-md-12 col-12 col-lg-6 col-xxl-6" data-aos="zoom-in">
+                        <h6>Hello Dear</h6>
+                        <h1>Welcome To <span>Potluck</span> <br> Restaurant </h1>
+                        <p> Potluck is a dream come true for a bunch of friends sharing their sheer love for food and
+                            experimentation. We are constantly experimenting with both local and international flavors
+                            and
+                            constantly pushing boundaries whilst also maintaining quality and hygiene to the highest
+                            standards. We offer lavishly decorated dish with multi cuisine menus, especially Thai,
+                            Chinese &
+                            Indian cuisine. We also serve Bengali foods We are grateful for all the love you have given
+                            us
+                            so far. We hope to continue
+                            serving you with amazing, mouthwatering dishes for you, your friends and your family. </p>
+                    </div>
+                    <div class="col-md-12 col-12 col-lg-6 col-xxl-6" data-aos="zoom-in">
+                        <img src="./img/background2.png" alt="image is loading" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- our menu section -->
+        <section class="menu-section">
+            <div class="container py-5">
+                <h1 class="menu-heading">Our menu</h1>
+                <div class="row gy-5 py-3">
+                    <div class="col-md-12 col-12 col-lg-4 col-xxl-4">
+                        <div class="card">
+                            <figure class="figure" id="thai_cuisine">
+                                <img src="img/noodles1.jpg" class="card-img-top img-fluid" alt="image is loading">
+                            </figure>
+                            <div class="card-body">
+                                <p class="card-text">Thai Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 col-lg-4 col-xxl-4">
+                        <div class="card">
+                            <figure class="figure" id="indian_cuisine">
+                                <img src="img/chicken4.jpg" class="card-img-top img-fluid" alt="image is loading">
+                            </figure>
+                            <div class="card-body">
+                                <p class="card-text">Indian Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 col-lg-4 col-xxl-4">
+                        <div class="card">
+                            <figure class="figure" id="continental_cuisine">
+                                <img src="img/soup2.jpg" class="card-img-top img-fluid" alt="image is loading">
+                            </figure>
+                            <div class="card-body">
+                                <p class="card-text">Continental Cuisine</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-12 col-lg-4 col-xxl-4">
+                        <div class="card">
+                            <figure class="figure" id="desert_drinks">
+                                <img src="img/drinks1.jpg" class="card-img-top img-fluid" alt="image is loading">
+                            </figure>
+                            <div class="card-body">
+                                <p class="card-text">Desert & Drinks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review-section ">
+            <div class="container py-5">
+                <h3>Our Guestbook</h3>
+                <h1>Peope Say About Us</h1>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="review-text">
+                                <p> Such a posh looking sitting arrangement. Much appreciating interior. Comfortable
+                                    place
+                                    for
+                                    high end time passing <br> with your loving one. We felt taken care of! Food come
+                                    out
+                                    quickly and was hot and yummy. It makes our valueable time more precious and We
+                                    loved
+                                    it.
+                                </p>
+                                <h5>Shehran Naim </h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review-text">
+                                <p> Great Place for hangout with friends and familly. They served different types of
+                                    food
+                                    and i
+                                    like the environment very much
+                                    their seafood was too mush delicious and desert was felt like from another planet.
+                                    It
+                                    was
+                                    that much delicious. I highly recommended all of you to try their desert items. </p>
+                                <h5>Abu Naim Md. Sakib </h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review-text">
+                                <p>I heard about Potluck Restaurant from a group and knocked them. I wanted the food to
+                                    be
+                                    delivered to my
+                                    house before lunch time and a very quick response from them. I ordered the peri-peri
+                                    chicken
+                                    platter for 4
+                                    person. The food was quite warm when deliverd it and the quantity was more than
+                                    enough.
+                                    We
+                                    enjoyed the food too much . </p>
+                                <h5>Abdullah bin Abu </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- our services section  -->
+        <section class="service-section">
+            <div class="container py-5">
+                <h1>Our Services</h1>
+                <div class="row">
+                    <div class="col-md-12 col-12 col-lg-12 col-xxl-12">
+                        <p class="service-text">Potluck has excellent facilities for arranging different types of
+                            programmes
+                            for <br> 300-400
+                            people,
+                            meeting, and conference besides individual lunch/dinner <br> arrangement. Our services and
+                            facilities
+                            include: </p>
+                        <ul type="disc" class="service-list">
+                            <li class="list">Two exclusive decorative dining halls. </li>
+                            <li class="list">Luxury room with 12-15 person capacity. </li>
+                            <li class="list">350 person sitting lunch/diner and buffet service. </li>
+                            <li class="list">500 person standing lunch dinner and buffet service. </li>
+                            <li class="list">All kind of party with all facilities. </li>
+                            <li class="list">Individual parking area with security. </li>
+                            <li class="list">Exclusive photography area for All</li>
+                            <li class="list">All kind of outside catering. </li>
+                            <li class="list">Kids entertainment. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- map section -->
+        <%- include('./partials/map.ejs') %>
+
+            <!-- footer section -->
+            <%- include('./partials/footer.ejs') %>
+
+
+
+
+
+
+
+
+
+                <!-- Optional JavaScript; choose one of the two! -->
+
+                <!-- Option 1: Bootstrap Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+                    crossorigin="anonymous"></script>
+
+                <!-- Option 2: Separate Popper and Bootstrap JS -->
+                <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+                <!-- github animation js link -->
+                <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                <script>
+                    AOS.init({
+                        offset: 150,
+                        duration: 800
+
+                    });
+                </script>
+
+                <!-- external js link -->
+                <script src="index.js"></script>
+
+    </body>
+
+    </html>

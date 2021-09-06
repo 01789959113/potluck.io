@@ -1,0 +1,97 @@
+
+ <!-- head section -->
+ <%- include('./partials/head.ejs') %>
+
+
+ <body>
+ 
+ 
+     <!-- header section -->
+     <header class="login_header">
+ 
+         <!-- navbar section -->
+         <%- include('./partials/nav.ejs') %>
+
+
+        <div class="nav-text">
+            <h1>Please Login </h1>
+            <h6>Come join with us</h6>
+            <form class="d-flex">
+                <button class="nav-txt-btn"> <a href="/bookTable">Book a table</a></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- login form -->
+    <section class="login-section">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-12 col-12 col-lg-12 col-xxl-12">
+                    <form action="/login" method="POST" class="form">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <h1 class="h3 mb-3 fw-normal">Please Log in</h1>
+
+                        <!-- error message -->
+                        <%- include('./partials/loginErrMsg.ejs') %>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address </label>
+                            <input type="email" class="form-control" id="email" name="email"
+                            value="<%= typeof email !='undefined'? email :'' %>" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="text" class="form-control" id="password" name="password"
+                            value="<%= typeof password !='undefined'? password :'' %>" >
+                        </div>
+                        <button class="form-btn" type="submit"> Login </a></button>
+                        <p class="form-text">Don't have an account ? <a href="/signup">Create One </a> </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+      <!-- map section -->
+      <%- include('./partials/map.ejs') %>
+
+      <!-- footer section -->
+      <%- include('./partials/footer.ejs') %>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+    <!-- github animation js link -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 150,
+            duration: 800
+
+        });
+    </script>
+
+    <!-- external js link -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

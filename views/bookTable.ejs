@@ -1,0 +1,118 @@
+<!-- head section -->
+<%- include('./partials/head.ejs') %>
+
+
+    <body>
+
+
+        <!-- header section -->
+        <header class="booktable_header">
+
+            <!-- navbar section -->
+            <%- include('./partials/nav.ejs') %>
+
+
+                <div class="nav-text">
+                    <h1>Make a Reservation </h1>
+                </div>
+        </header>
+
+        <!-- book table section -->
+        <section class="booktable-section">
+            <div class="container py-5">
+                <h1 class="booktable-heading">Book Your Table </h1>
+
+                <!-- error message -->
+                <%- include('./partials/bookTableErrMsg.ejs') %>
+
+                    <div class="row">
+                        <div class="col-md-12 col-12 col-lg-12 col-xxl-12">
+                            <form action="/bookTable" method="POST" class="row g-3 form">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        value="<%= typeof name !='undefined'? name :'' %>" >
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="mobile" class="form-label">Mobile</label>
+                                    <input type="text" class="form-control" id="mobile" name="mobile"
+                                        value="<%= typeof mobile !='undefined'? mobile :'' %>">
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        value="<%= typeof email !='undefined'?email :'' %>">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="date" name="date"
+                                        value="<%= typeof date !='undefined'? date :'' %>">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="time" class="form-label">Time</label>
+                                    <input type="time" class="form-control" id="time" name="time"
+                                        value="<%= typeof time !='undefined'? time :'' %>">
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="person" class="form-label">Person</label>
+                                    <input type="number" class="form-control" id="person" name="person"
+                                        value="<%= typeof person !='undefined'? person :'' %>">
+                                </div>
+                                <div class="col-12">
+                                    <label for="comment" class="form-label">Comment (Optional) </label>
+                                    <textarea class="form-control" id="comment" name="comment" rows="3"
+                                        value="<%= typeof comment !='undefined'? comment :'' %>"></textarea>
+
+                                </div>
+                                <div class="col-12">
+                                    <button class="form-btn" type="submit">Reserve </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <!-- map section -->
+        <%- include('./partials/map.ejs') %>
+
+            <!-- footer section -->
+            <%- include('./partials/footer.ejs') %>
+
+
+
+
+
+
+
+
+
+                <!-- Optional JavaScript; choose one of the two! -->
+
+                <!-- Option 1: Bootstrap Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+                    crossorigin="anonymous"></script>
+
+                <!-- Option 2: Separate Popper and Bootstrap JS -->
+                <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+
+                <!-- github animation js link -->
+                <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                <script>
+                    AOS.init({
+                        offset: 150,
+                        duration: 800
+
+                    });
+                </script>
+
+                <!-- external js link -->
+                <script src="index.js"></script>
+
+    </body>
+
+    </html>

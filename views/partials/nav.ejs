@@ -1,0 +1,49 @@
+<nav id="navbar" class="navbar navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/"><i class="fas fa-egg" title="Egg"></i> Potluck <i class="fas fa-egg"
+                title="Egg"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"> <i class="fas fa-bars"></i> </span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title active" id="offcanvasNavbarLabel">Potluck</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#">Menu <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/thai">Thai Cuisine</a></li>
+                            <li><a class="dropdown-item" href="/indian">Indian Cuisine</a></li>
+                            <li><a class="dropdown-item" href="/continental">Continental Cuisine</a></li>
+                            <li><a class="dropdown-item" href="/desert">Desert & Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/gallery">Gallery</a>
+                    </li>
+                    <button class="nav-btn"><a href="/bookTable">Book a Table </a></button>
+                    <!-- <button class="login-btn"> <a href="/login">LogIn</a></button>
+                    <button class="signup-btn"> <a href="/signup">Sign-up</a></button> -->
+
+                    <% if(isLoggedIn){ %> 
+                        <button class="logout-btn"> <a href="/logout">Logout</a></button>
+                   <% } else { %> 
+                    <button class="login-btn"> <a href="/login">LogIn</a></button>
+                    <button class="signup-btn"> <a href="/signup">Sign-up</a></button>
+                  <%  } %> 
+            </div>
+        </div>
+    </div>
+</nav>
