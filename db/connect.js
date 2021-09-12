@@ -1,12 +1,18 @@
-const mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost:27017/restaurantUser', { useNewUrlParser: true, useUnifiedTopology: true})
-//     .then(() => console.log('we are connected'))
-//     .catch(e => { console.log(e) })
+const mysql = require('mysql');
+var connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DATABASE
+});
 
+connection.connect(function (err) {
+    if (err) {
+        console.error('error connecting ');
+        return;
+    }
 
-main().then(()=> console.log('connected'))
-.catch(err => console.log(err));
+    console.log('connected ');
+});
 
-async function main() {
-    await mongoose.connect('mongodb://localhost:27017/restaurantUser');
-}
+module.exports = connection;
